@@ -4,44 +4,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RedMotorcycle Resources</title>
+    <title>RedMotorcycle Apps</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: sans-serif;
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 20px;
-            line-height: 1.6;
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            --card-glass: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --card-hover-bg: rgba(255, 255, 255, 0.08);
+            --card-hover-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #f43f5e;
+            --accent-hover: #e11d48;
         }
 
-        h1 {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-        }
-
-        ul {
-            list-style-type: none;
+        * {
+            box-sizing: border-box;
+            margin: 0;
             padding: 0;
         }
 
-        li {
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            margin: 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            max-width: 800px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #f43f5e, #fb923c);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* Products Grid */
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1100px;
+            padding: 0 20px 80px;
+        }
+
+        .product-card {
+            background: var(--card-glass);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 40px 30px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            animation: fadeInUp 1s ease-out both;
+        }
+
+        .product-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .product-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .product-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            background: var(--card-hover-bg);
+            border-color: var(--card-hover-border);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(244, 63, 94, 0.1);
+        }
+
+        .product-card h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
             margin-bottom: 15px;
+            color: #ffffff;
         }
 
-        a {
-            color: #d32f2f;
+        .product-card p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+
+        /* Links & Buttons */
+        .badges-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .store-badge img {
+            height: 48px;
+            width: auto;
+            border-radius: 8px;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .store-badge:hover img {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .text-link {
+            display: inline-block;
+            color: var(--text-secondary);
             text-decoration: none;
-            font-weight: bold;
+            font-size: 0.95rem;
+            font-weight: 400;
+            padding: 8px 0;
+            transition: color 0.3s ease;
+            position: relative;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .text-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: var(--text-secondary);
+            bottom: 6px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .text-link:hover {
+            color: #fff;
+        }
+
+        .text-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+            background: #fff;
+        }
+
+        .footer {
+            margin-top: auto;
+            padding: 40px 20px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .product-card {
+                padding: 30px 20px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>RedMotorcycle Resources</h1>
+
+    <header class="hero">
+        <h1>RedMotorcycle Apps</h1>
+        <p>シンプルで高品質、スマートなモバイルアプリケーションを提供します。</p>
+    </header>
+
+    <main class="products-container">
+
+        <!-- Product 1: Valor Board -->
+        <article class="product-card">
+            <h2>Valor Board</h2>
+            <p>VALORANTプレイヤーのための本格的な戦績トラッカー。高度な統計分析、詳細な試合履歴、直感的なダッシュボード機能であなたのプレイスキル向上をサポートします。</p>
+            <div class="badges-row">
+                <a href="https://play.google.com/store/apps/details?id=jp.redmotorcycle.valorant_tracker"
+                    target="_blank" class="store-badge">
+                    <img src="assets/Google-Play-Badge/ja_badge_web_generic.png" alt="Google Play で手に入れよう">
+                </a>
+                <a href="https://apps.apple.com/jp/app/valor-board/id6450135340" target="_blank" class="store-badge">
+                    <img src="assets/Download-on-the-App-Store/JP/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg"
+                        alt="App Storeからダウンロード">
+                </a>
+            </div>
+            <div>
+                <a href="privacypolicy/ja/valor-board.html" class="text-link">プライバシーポリシー</a>
+            </div>
+        </article>
+
+        <!-- Product 2: Pita Team -->
+        <article class="product-card">
+            <h2>Pita Team</h2>
+            <p>スポーツやゲーム、イベントでのチーム分けを直感的かつスピーディに行えるアプリ。メンバーのバランスを考慮した自動割り振りで、公平な組分けをスマートに実現します。</p>
+            <div class="badges-row">
+                <a href="https://play.google.com/store/apps/details?id=jp.redmotorcycle.kumiwake" target="_blank"
+                    class="store-badge">
+                    <img src="assets/Google-Play-Badge/ja_badge_web_generic.png" alt="Google Play で手に入れよう">
+                </a>
+                <a href="https://apps.apple.com/jp/app/pita-team/id6758243384" target="_blank" class="store-badge">
+                    <img src="assets/Download-on-the-App-Store/JP/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg"
+                        alt="App Storeからダウンロード">
+                </a>
+            </div>
+            <div>
+                <a href="privacypolicy/ja/pita-team.html" class="text-link">プライバシーポリシー</a>
+            </div>
+        </article>
+
+        <!-- Product 3: Red QR -->
+        <article class="product-card">
+            <h2>Red QR</h2>
+            <p>ミニマルで超高速なQRコードリーダー。余計な機能は一切省き、起動後すぐに使えることに特化しました。安全・安心な読み取り体験を提供します。</p>
+            <div class="badges-row" style="min-height: 48px;">
+                <a href="https://play.google.com/store/apps/details?id=redmotorcycle.qrcodemanager" target="_blank"
+                    class="store-badge">
+                    <img src="assets/Google-Play-Badge/ja_badge_web_generic.png" alt="Google Play で手に入れよう">
+                </a>
+            </div>
+            <div>
+                <a href="privacypolicy/ja/red-qr.html" class="text-link">プライバシーポリシー</a>
+            </div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        &copy;
+        <script>document.write(new Date().getFullYear())</script> RedMotorcycle Apps. All rights reserved.
+    </footer>
+
 </body>
 
 </html>
