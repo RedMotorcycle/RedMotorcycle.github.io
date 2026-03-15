@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "KFCF532W8X.jp.redmotorcycle.ValorantTracker",
+        "paths": [
+          "/rso-redirect/*"
+        ]
+      },
+      {
+        "appID": "KFCF532W8X.jp.redmotorcycle.ValorantTracker.debug",
+        "paths": [
+          "/rso-redirect/*"
+        ]
+      }
+    ]
+  }
+}
