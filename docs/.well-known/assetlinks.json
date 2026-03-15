@@ -7,7 +7,7 @@
       "namespace": "android_app",
       "package_name": "jp.redmotorcycle.valorant_tracker",
       "sha256_cert_fingerprints": [
-        "26:77:04:bc:b9:45:f0:a8:2c:9a:0f:0a:ed:a7:fb:8e:f0:70:30:e1:af:d9:91:cb:1e:87:80:66:6f:e0:69:ae"
+        "26:77:04:BC:B9:45:F0:A8:2C:9A:0F:0A:ED:A7:FB:8E:F0:70:30:E1:AF:D9:91:CB:1E:87:80:66:6F:E0:69:AE"
       ]
     }
   },
@@ -19,7 +19,7 @@
       "namespace": "android_app",
       "package_name": "jp.redmotorcycle.valorant_tracker.debug",
       "sha256_cert_fingerprints": [
-        "63:12:94:55:fc:bc:34:34:d9:7f:74:85:93:c4:40:63:fb:52:4f:83:99:46:80:7d:84:1f:82:cd:62:c3:9d:81"
+        "63:12:94:55:FC:BC:34:34:D9:7F:74:85:93:C4:40:63:FB:52:4F:83:99:46:80:7D:84:1F:82:CD:62:C3:9D:81"
       ]
     }
   }
