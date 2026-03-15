@@ -11,7 +11,7 @@
       {
         "appID": "KFCF532W8X.jp.redmotorcycle.ValorantTracker.debug",
         "paths": [
-          "/rso-redirect/*"
+          "/debug/rso-redirect/*"
         ]
       }
     ]
