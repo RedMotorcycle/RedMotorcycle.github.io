@@ -82,7 +82,7 @@
         <span style="color: #666;">한국어</span>
     </div>
     <h1>Valor Board 개인정보 처리방침</h1>
-    <p class="update-date">최종 수정일: 2026년 4월 13일</p>
+    <p class="update-date">최종 수정일: 2026년 4월 14日</p>
     <div class="intro">
         <p>본 애플리케이션을 사용함으로써 본 개인정보 처리방침에 동의하게 됩니다.</p>
         <p>사용자는 앱의 첫 사용 시 또는 방침이 개정되었을 때 동의 화면에서 최신 방침을 확인해야 합니다.</p>
@@ -114,7 +114,7 @@
         <li>Firebase Analytics: 앱 사용 데이터 (개인 식별 정보 포함되지 않음)</li>
         <li>Firebase Performance Monitoring: 앱 성능 데이터 (예: 통신 속도, 화면 렌더링 속도)</li>
         <li>Firebase Crashlytics: 크래시 리포트 (기기 정보 포함)</li>
-        <li>Cloud Firestore: 사용자 PUUID, Riot ID(게임 이름#태그라인), 동의 정보, 및 가입 날짜 (앱 사용자 간의 데이터 검증용)</li>
+        <li>Cloud Firestore: 사용자 PUUID, Riot ID(게임 이름#태그라인), 동의 정보, 가입 날짜, 및 수집된 매치 상세 데이터 (전적 저장, 검색 속도 향상 및 통계 활용 용도)</li>
         <li>Firebase App Check: 앱 및 기기 정품 인증을 위한 토큰 (Google Play Integrity API / Apple DeviceCheck / App Attest)</li>
         <li>Firebase Authentication: 로그인 인증, PUUID 관리 (사용자 식별)</li>
         <li>Google AdMob: 광고 식별자 (IDFA/AAID), 기기 정보 및 상호작용 데이터 (광고 제공 및 분석용)</li>
@@ -125,11 +125,11 @@
     <ul>
         <li>기기 저장소: 인증 정보, 설정, 캐시</li>
         <li>Firebase 서버 (Google Cloud): 분석 데이터, 성능 데이터, 크래시 리포트</li>
-        <li>Cloud Firestore (Google Cloud / 도쿄 리전): 옵트인 사용자 식별자 (PUUID)</li>
+        <li>Cloud Firestore (Google Cloud / 도쿄 리전): 옵트인 사용자 식별자 (PUUID), 매치 상세 데이터</li>
         <li>Firebase Authentication (Google Cloud / 도쿄 리전): 인증 토큰, PUUID</li>
         <li>Google AdMob 서버: 광고 관련 데이터</li>
     </ul>
-    <p>본 애플리케이션은 자체 서버에서 데이터를 수집하지 않으며, 기능을 제공하기 위해 앞서 언급한 Firebase 서비스와 Google AdMob을 사용합니다.</p>
+    <p>수집된 매치 데이터는 API 제한 회피, 검색 속도 향상, 그리고 Riot API에서 더 이상 조회할 수 없는 과거 전적을 영구적으로 확인할 수 있도록 하기 위해 Firebase 서버에 저장됩니다. 기능을 제공하기 위해 앞서 언급한 Firebase 서비스와 Google AdMob을 사용합니다.</p>
     <h3>데이터 보유 기간</h3>
     <ul>
         <li>기기 데이터: 앱이 삭제될 때까지</li>

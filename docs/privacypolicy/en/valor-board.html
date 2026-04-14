@@ -82,7 +82,7 @@
         <a href="../ko/valor-board.html">한국어</a>
     </div>
     <h1>Valor Board Privacy Policy</h1>
-    <p class="update-date">Last Updated: April 13, 2026</p>
+    <p class="update-date">Last Updated: April 14, 2026</p>
     <div class="intro">
         <p>By using this application, you agree to this Privacy Policy.</p>
         <p>Users are asked to review the latest policy on the consent screen during the first use of the app or when the
@@ -119,7 +119,7 @@
         <li>Firebase Performance Monitoring: App performance data (e.g., communication speed, screen rendering speed)
         </li>
         <li>Firebase Crashlytics: Crash reports (includes device information)</li>
-        <li>Cloud Firestore: User's PUUID, Riot ID (Game Name#Tagline), consent information, and registration date (for data validation among app users)</li>
+        <li>Cloud Firestore: User's PUUID, Riot ID (Game Name#Tagline), consent information, registration date, and retrieved match detail data (for saving match history, speeding up searches, and statistical analysis)</li>
         <li>Firebase App Check: Tokens for verifying app and device authenticity (Google Play Integrity API / Apple DeviceCheck / App Attest)</li>
         <li>Firebase Authentication: Login authentication, management of PUUID (User identification)</li>
         <li>Google AdMob: Advertising identifiers (IDFA/AAID), device information, and interaction data (for ad delivery
@@ -131,12 +131,11 @@
     <ul>
         <li>Device Storage: Authentication info, settings, cache</li>
         <li>Firebase Servers (Google Cloud): Analytics data, performance data, crash reports</li>
-        <li>Cloud Firestore (Google Cloud / Tokyo Region): Opt-in user identifiers (PUUID)</li>
+        <li>Cloud Firestore (Google Cloud / Tokyo Region): Opt-in user identifiers (PUUID), match detail data</li>
         <li>Firebase Authentication (Google Cloud / Tokyo Region): Authentication tokens, PUUID</li>
         <li>Google AdMob Servers: Advertising-related data</li>
     </ul>
-    <p>This application does not collect data on proprietary servers but uses the aforementioned Firebase services and
-        Google AdMob to provide features.</p>
+    <p>Retrieved match data is stored on Firebase servers to avoid API rate limits, speed up searches, and permanently view past match results that can no longer be retrieved from the Riot API. This application uses the aforementioned Firebase services and Google AdMob to provide features.</p>
     <h3>Data Retention Period</h3>
     <ul>
         <li>Device Data: Until the app is uninstalled</li>

@@ -82,7 +82,7 @@
         <a href="../ko/valor-board.html">한국어</a>
     </div>
     <h1>Valor Board 隱私權政策</h1>
-    <p class="update-date">最後更新日期：2026年4月13日</p>
+    <p class="update-date">最後更新日期：2026年4月14日</p>
     <div class="intro">
         <p>在使用本應用程式之前，請務必閱讀並同意本隱私權政策。</p>
         <p>用戶在首次使用應用程式或政策修訂時，需在同意畫面上確認最新政策。</p>
@@ -112,7 +112,7 @@
         <li>Firebase Analytics：應用程式使用狀況（不含個人識別資訊）</li>
         <li>Firebase Performance Monitoring：應用程式性能數據（例如通信速度、畫面渲染速度等）</li>
         <li>Firebase Crashlytics：崩潰報告（包含裝置資訊）</li>
-        <li>Cloud Firestore：用戶的 PUUID、Riot ID（遊戲名稱#標籤）、同意資訊及註冊日期（用於應用程式用戶間的資料驗證）</li>
+        <li>Cloud Firestore：用戶的 PUUID、Riot ID（遊戲名稱#標籤）、同意資訊、註冊日期，及取得的對戰詳細資料（用於儲存戰績、提高搜尋速度及統計分析）</li>
         <li>Firebase App Check：用於驗證應用程式與裝置真實性的權杖（Google Play Integrity API / Apple DeviceCheck / App Attest）</li>
         <li>Firebase Authentication：登入驗證、PUUID 的管理（用戶識別）</li>
         <li>Google AdMob：廣告識別碼（IDFA/AAID）、裝置資訊及互動資料（用於廣告投放與分析）</li>
@@ -123,11 +123,11 @@
     <ul>
         <li>裝置內部儲存：驗證資訊、設定、快取</li>
         <li>Firebase 伺服器（Google Cloud）：分析資料、性能數據、崩潰報告</li>
-        <li>Cloud Firestore（Google Cloud / 東京區域）：Opt-in 用戶的識別碼（PUUID）</li>
+        <li>Cloud Firestore（Google Cloud / 東京區域）：Opt-in 用戶的識別碼（PUUID）、對戰詳細資料</li>
         <li>Firebase Authentication（Google Cloud / 東京區域）：驗證權杖、PUUID</li>
         <li>Google AdMob 伺服器：廣告相關資料</li>
     </ul>
-    <p>本應用程式不會在自有伺服器上收集資料，而是利用上述 Firebase 服務及 Google AdMob 來提供功能。</p>
+    <p>取得的對戰資料會儲存在 Firebase 伺服器上，以避免 API 限制、提高搜尋速度，並可永久查看無法再從 Riot API 取得的過去戰績。本應用程式利用上述 Firebase 服務及 Google AdMob 來提供功能。</p>
     <h3>資料保存期間</h3>
     <ul>
         <li>裝置內部資料：直到解除安裝應用程式為止</li>

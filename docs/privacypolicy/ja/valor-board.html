@@ -82,7 +82,7 @@
     <a href="../ko/valor-board.html">한국어</a>
   </div>
   <h1>Valor Board プライバシーポリシー</h1>
-  <p class="update-date">最終更新日: 2026年4月13日</p>
+  <p class="update-date">最終更新日: 2026年4月14日</p>
   <div class="intro">
     <p>当アプリのご利用に当たって、以下のプライバシーポリシーにご理解頂いた上で利用することに同意するものとします。</p>
     <p>ユーザーの皆様には、アプリの初回利用時またはポリシーの改定時に、同意画面にて最新のポリシーをご確認いただいています。</p>
@@ -112,7 +112,7 @@
     <li>Firebase Analytics: アプリ使用状況（個人特定情報は含まれません）</li>
     <li>Firebase Performance Monitoring: アプリのパフォーマンスデータ（通信速度、画面描画速度等）</li>
     <li>Firebase Crashlytics: クラッシュレポート（デバイス情報含む）</li>
-    <li>Cloud Firestore: ユーザーのPUUID、Riot ID（ゲームネーム#タグライン）、同意情報、および登録日時（本アプリ利用者間でのデータ検証のため）</li>
+    <li>Cloud Firestore: ユーザーのPUUID、Riot ID（ゲームネーム#タグライン）、同意情報、登録日時、および取得されたマッチ詳細データ（戦績の保存、検索の高速化、および統計活用のため）</li>
     <li>Firebase App Check: アプリと端末の真正性確認のためのトークン（Google Play Integrity API / Apple DeviceCheck / App Attest）</li>
     <li>Firebase Authentication: ログイン認証、PUUIDの管理（ユーザーの識別）</li>
     <li>Google AdMob: 広告識別子（IDFA/AAID）、デバイス情報、広告の表示・クリックなどの対話情報（広告配信および分析のため）</li>
@@ -123,11 +123,11 @@
   <ul>
     <li>端末内ストレージ: 認証情報、設定、キャッシュ</li>
     <li>Firebaseサーバー（Google Cloud）: 分析データ、パフォーマンスデータ、クラッシュレポート</li>
-    <li>Cloud Firestore（Google Cloud / 東京リージョン）: Opt-inユーザーの識別子（PUUID）</li>
+    <li>Cloud Firestore（Google Cloud / 東京リージョン）: Opt-inユーザーの識別子（PUUID）、マッチ詳細データ</li>
     <li>Firebase Authentication（Google Cloud / 東京リージョン）: 認証トークン、PUUID</li>
     <li>Google AdMobサーバー: 広告関連データ</li>
   </ul>
-  <p>当アプリは独自サーバーでのデータ収集は行いませんが、機能提供のために上記FirebaseサービスおよびGoogle AdMobを利用しています。</p>
+  <p>取得されたマッチデータは、API制限の回避、検索の高速化、およびRiot APIから取得できなくなった過去の戦績を永続的に確認できるようにするため、Firebaseサーバー上に保存されます。機能提供のために上記FirebaseサービスおよびGoogle AdMobを利用しています。</p>
   <h3>データの保持期間</h3>
   <ul>
     <li>端末内データ: アプリをアンインストールするまで</li>
