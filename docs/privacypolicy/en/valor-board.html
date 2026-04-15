@@ -218,11 +218,11 @@
         <p>Contact: <a href="mailto:redmotorcycleapps+valor-board@gmail.com">redmotorcycleapps+valor-board@gmail.com</a>
         </p>
         <div style="display: flex; align-items: center; gap: 10px; margin-top: 10px;">
-            <a href="https://play.google.com/store/apps/details?id=jp.redmotorcycle.valorant_tracker" target="_blank">
+            <a id="google-play-badge" href="https://play.google.com/store/apps/details?id=jp.redmotorcycle.valorant_tracker" target="_blank">
                 <img src="../../assets/Google-Play-Badge/en_badge_web_generic.png" alt="Get it on Google Play"
                     style="width: 155px; height: auto;">
             </a>
-            <a href="https://apps.apple.com/app/valor-board/id6450135340" target="_blank">
+            <a id="app-store-badge" href="https://apps.apple.com/app/valor-board/id6450135340" target="_blank">
                 <img src="../../assets/Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
                     alt="Download on the App Store" style="width: 135px; height: auto;">
             </a>
@@ -230,6 +230,18 @@
 
     </div>
     <div id="scroll-bottom-sentinel" style="height: 2px;"></div>
+    <script>
+        (function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('is_review') === 'true') {
+                const ids = ['google-play-badge', 'app-store-badge'];
+                ids.forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) el.style.display = 'none';
+                });
+            }
+        })();
+    </script>
 </body>
 
 </html>
