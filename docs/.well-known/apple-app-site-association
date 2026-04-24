@@ -24,5 +24,11 @@
         ]
       }
     ]
+  },
+  "webcredentials": {
+    "apps": [
+      "KFCF532W8X.jp.redmotorcycle.ValorantTracker",
+      "KFCF532W8X.jp.redmotorcycle.ValorantTracker.debug"
+    ]
   }
 }
